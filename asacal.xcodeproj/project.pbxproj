@@ -13,6 +13,7 @@
 		726386691ADCCD5E00E20650 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726386681ADCCD5E00E20650 /* Images.xcassets */; };
 		7263866C1ADCCD5E00E20650 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7263866A1ADCCD5E00E20650 /* LaunchScreen.xib */; };
 		726386781ADCCD5E00E20650 /* asacalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726386771ADCCD5E00E20650 /* asacalTests.swift */; };
+		CA859914095BA001D28B67B7 /* libPods-asacal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD98417F28F2B5E86E63E71A /* libPods-asacal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		726386711ADCCD5E00E20650 /* asacalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = asacalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		726386761ADCCD5E00E20650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726386771ADCCD5E00E20650 /* asacalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asacalTests.swift; sourceTree = "<group>"; };
+		AD98417F28F2B5E86E63E71A /* libPods-asacal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asacal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF940602CABD434C95597740 /* Pods-asacal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asacal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asacal/Pods-asacal.debug.xcconfig"; sourceTree = "<group>"; };
+		C17D1A6213D95BC7B110B8E9 /* Pods-asacal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asacal.release.xcconfig"; path = "Pods/Target Support Files/Pods-asacal/Pods-asacal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA859914095BA001D28B67B7 /* libPods-asacal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				7263865E1ADCCD5E00E20650 /* asacal */,
 				726386741ADCCD5E00E20650 /* asacalTests */,
 				7263865D1ADCCD5E00E20650 /* Products */,
+				D899DF7313758CE2328D5459 /* Pods */,
+				7A2DEE8C754C1583873A0097 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7A2DEE8C754C1583873A0097 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD98417F28F2B5E86E63E71A /* libPods-asacal.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D899DF7313758CE2328D5459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF940602CABD434C95597740 /* Pods-asacal.debug.xcconfig */,
+				C17D1A6213D95BC7B110B8E9 /* Pods-asacal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7263867B1ADCCD5E00E20650 /* Build configuration list for PBXNativeTarget "asacal" */;
 			buildPhases = (
+				07D20BF7691B85BFBD3E620F /* Check Pods Manifest.lock */,
 				726386581ADCCD5E00E20650 /* Sources */,
 				726386591ADCCD5E00E20650 /* Frameworks */,
 				7263865A1ADCCD5E00E20650 /* Resources */,
+				DC2E443E63959869B0447807 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +232,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07D20BF7691B85BFBD3E620F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2E443E63959869B0447807 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asacal/Pods-asacal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		726386581ADCCD5E00E20650 /* Sources */ = {
@@ -338,6 +397,7 @@
 		};
 		7263867C1ADCCD5E00E20650 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF940602CABD434C95597740 /* Pods-asacal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = asacal/Info.plist;
@@ -348,6 +408,7 @@
 		};
 		7263867D1ADCCD5E00E20650 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17D1A6213D95BC7B110B8E9 /* Pods-asacal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = asacal/Info.plist;
@@ -409,6 +470,7 @@
 				7263867D1ADCCD5E00E20650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7263867E1ADCCD5E00E20650 /* Build configuration list for PBXNativeTarget "asacalTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +479,7 @@
 				726386801ADCCD5E00E20650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
